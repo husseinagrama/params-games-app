@@ -19,4 +19,16 @@ class GamesController < ApplicationController
     render "number_guess.html.erb"
 
   end
+  def new_guess_method
+    @guess = params["this_guess"].to_i
+    render "new_guess.html.erb"
+
+  end
+  def games_form_method
+    render "form.html.erb"
+  end
+  def cool_result_method
+    @value = params["form_message"]
+    render "form_result.html.erb"
+  end
 end
